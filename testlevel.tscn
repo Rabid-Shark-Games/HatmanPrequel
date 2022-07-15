@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://placement.gd" type="Script" id=3]
+[ext_resource path="res://BirdSpawner.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32000, 320 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32, 16 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BirdSpawner" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="BirdSpawner"]
+current = true
+smoothing_enabled = true
+
+[node name="Icon" type="Sprite" parent="BirdSpawner/Camera2D"]
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 51, 450 )
+
+[node name="Icon" type="Sprite" parent="StaticBody2D"]
+scale = Vector2( 1000, 10 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="brick" type="RigidBody2D" parent="."]
+position = Vector2( 738, 114 )
+
+[node name="Icon" type="Sprite" parent="brick"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick"]
+shape = SubResource( 3 )
+
+[node name="brick2" type="RigidBody2D" parent="."]
+position = Vector2( 738, 82 )
+
+[node name="Icon" type="Sprite" parent="brick2"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick2"]
+shape = SubResource( 3 )
+
+[node name="brick3" type="RigidBody2D" parent="."]
+position = Vector2( 738, 50 )
+
+[node name="Icon" type="Sprite" parent="brick3"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick3"]
+shape = SubResource( 3 )
+
+[node name="brick4" type="RigidBody2D" parent="."]
+position = Vector2( 738, 18 )
+
+[node name="Icon" type="Sprite" parent="brick4"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick4"]
+shape = SubResource( 3 )
+
+[node name="brick5" type="RigidBody2D" parent="."]
+position = Vector2( 738, -13 )
+
+[node name="Icon" type="Sprite" parent="brick5"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick5"]
+shape = SubResource( 3 )
+
+[node name="brick6" type="RigidBody2D" parent="."]
+position = Vector2( 738, -45 )
+
+[node name="Icon" type="Sprite" parent="brick6"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick6"]
+shape = SubResource( 3 )
+
+[node name="brick7" type="RigidBody2D" parent="."]
+position = Vector2( 738, -77 )
+
+[node name="Icon" type="Sprite" parent="brick7"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick7"]
+shape = SubResource( 3 )
+
+[node name="brick8" type="RigidBody2D" parent="."]
+position = Vector2( 738, -109 )
+
+[node name="Icon" type="Sprite" parent="brick8"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="brick8"]
+shape = SubResource( 3 )
