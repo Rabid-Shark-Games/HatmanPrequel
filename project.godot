@@ -9,19 +9,40 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "DialogueResource",
+"language": "GDScript",
+"path": "res://addons/dialogue_manager/dialogue_resource.gd"
+}, {
 "base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "Node2D",
+"class": "PersistantDice",
+"language": "GDScript",
+"path": "res://PersistantDice.gd"
 } ]
 _global_script_class_icons={
-"GitAPI": ""
+"DialogueResource": "",
+"GitAPI": "",
+"PersistantDice": ""
 }
 
 [application]
 
 config/name="HatmanPrequel"
 config/icon="res://icon.png"
+
+[autoload]
+
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+PersonableDice="*res://PersonableDice.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg" )
 
 [gdnative]
 

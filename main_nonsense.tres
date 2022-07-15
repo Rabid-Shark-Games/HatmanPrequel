@@ -1,0 +1,240 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+syntax_version = 2
+raw_text = "~ gaming
+dice: gaming
+- gaming
+	=> gaming
+
+~ HAPPY_insane_1
+
+dice: bro that was crazy lmao
+- What?
+	dice: wym lol? we just won
+
+=> END
+
+~ HAPPY_insane_2
+
+dice: nice
+- How nice?
+	dice: very nice
+	- That's good.
+		dice: very good
+	- That's bad.
+		dice: lmao no its not
+- I agree.
+	dice: good
+
+=> END"
+errors = [  ]
+titles = {
+"HAPPY_insane_1": "7",
+"HAPPY_insane_2": "15",
+"gaming": "1"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "gaming",
+"type": "title"
+},
+"1": {
+"character": "dice",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "2",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "gaming",
+"time": null,
+"translation_key": "gaming",
+"type": "dialogue"
+},
+"11": {
+"next_id": "",
+"type": "goto"
+},
+"13": {
+"next_id": "15",
+"text": "HAPPY_insane_2",
+"type": "title"
+},
+"15": {
+"character": "dice",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "16",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "nice",
+"time": null,
+"translation_key": "nice",
+"type": "dialogue"
+},
+"16": {
+"next_id": "17",
+"next_id_after": "25",
+"replacements": [  ],
+"responses": PoolStringArray( "16", "22" ),
+"text": "How nice?",
+"translation_key": "How nice?",
+"type": "response"
+},
+"17": {
+"character": "dice",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "18",
+"parent_id": "16",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "very nice",
+"time": null,
+"translation_key": "very nice",
+"type": "dialogue"
+},
+"18": {
+"next_id": "19",
+"next_id_after": "25",
+"parent_id": "16",
+"replacements": [  ],
+"responses": PoolStringArray( "18", "20" ),
+"text": "That's good.",
+"translation_key": "That's good.",
+"type": "response"
+},
+"19": {
+"character": "dice",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "25",
+"parent_id": "18",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "very good",
+"time": null,
+"translation_key": "very good",
+"type": "dialogue"
+},
+"2": {
+"next_id": "3",
+"next_id_after": "end",
+"replacements": [  ],
+"responses": PoolStringArray( "2" ),
+"text": "gaming",
+"translation_key": "gaming",
+"type": "response"
+},
+"20": {
+"next_id": "21",
+"next_id_after": "25",
+"parent_id": "16",
+"replacements": [  ],
+"text": "That's bad.",
+"translation_key": "That's bad.",
+"type": "response"
+},
+"21": {
+"character": "dice",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "25",
+"parent_id": "20",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "lmao no its not",
+"time": null,
+"translation_key": "lmao no its not",
+"type": "dialogue"
+},
+"22": {
+"next_id": "23",
+"next_id_after": "25",
+"replacements": [  ],
+"text": "I agree.",
+"translation_key": "I agree.",
+"type": "response"
+},
+"23": {
+"character": "dice",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "25",
+"parent_id": "22",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "good",
+"time": null,
+"translation_key": "good",
+"type": "dialogue"
+},
+"25": {
+"next_id": "",
+"type": "goto"
+},
+"3": {
+"next_id": "1",
+"parent_id": "2",
+"type": "goto"
+},
+"5": {
+"next_id": "7",
+"text": "HAPPY_insane_1",
+"type": "title"
+},
+"7": {
+"character": "dice",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "8",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "bro that was crazy lmao",
+"time": null,
+"translation_key": "bro that was crazy lmao",
+"type": "dialogue"
+},
+"8": {
+"next_id": "9",
+"next_id_after": "11",
+"replacements": [  ],
+"responses": PoolStringArray( "8" ),
+"text": "What?",
+"translation_key": "What?",
+"type": "response"
+},
+"9": {
+"character": "dice",
+"character_replacements": [  ],
+"inline_mutations": [  ],
+"next_id": "11",
+"parent_id": "8",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "wym lol? we just won",
+"time": null,
+"translation_key": "wym lol? we just won",
+"type": "dialogue"
+}
+}
