@@ -35,7 +35,7 @@ func shoot():
 	var vec = (get_viewport().get_mouse_position() - mstart)
 	vec = vec.normalized() * min(200, vec.length())
 	gravity_scale = 1
-	linear_velocity = -Vector2(vec.x * 10, vec.y)
+	linear_velocity = -Vector2(vec.x * 10, vec.y * 6)
 
 func _physics_process(delta):
 	if shot:
